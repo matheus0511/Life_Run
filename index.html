@@ -1,107 +1,89 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="LifeRun e uma plataforma para descoberta, inscricao e gestao de eventos de corrida."
-  />
-  <title>LifeRun | Base do Projeto</title>
+  <meta name="description" content="Encontre corridas, caminhadas e maratonas no LifeRun." />
+  <title>LifeRun | Eventos de corrida</title>
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="/" aria-label="LifeRun">
+      <a class="brand" href="index.html" aria-label="LifeRun">
         <span class="brand-mark">LR</span>
-        <span>
-          <strong>LifeRun</strong>
-          <small>Eventos esportivos</small>
-        </span>
+        <span><strong>LifeRun</strong><small>Eventos esportivos</small></span>
       </a>
-
       <nav class="topbar-nav" aria-label="Navegacao principal">
-        <a href="#fase-zero">Fase 0</a>
-        <a href="#fundacao">Fundacao</a>
-        <a href="#proximos-passos">Proximos passos</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="pages/events.html">Eventos</a>
+        <a href="pages/profile.html">Perfil</a>
+        <a class="nav-button" href="pages/login.html">Entrar</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="fase-zero">
-        <div class="hero-content">
-          <p class="eyebrow">Fase 0 em andamento</p>
-          <h1>Base tecnica e organizacional do LifeRun</h1>
-          <p>
-            Esta primeira entrega prepara a estrutura do projeto para evoluir
-            para o MVP: autenticacao, eventos, inscricoes, pagamentos e resultados.
-          </p>
-
-          <div class="hero-actions" aria-label="Acoes principais">
-            <a class="button button-primary" href="docs/implementation_plan.md">Ver plano</a>
-            <a class="button button-secondary" href="docs/backlog.md">Ver backlog</a>
-          </div>
+      <section class="home-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Proximas largadas</p>
+          <h1>Encontre sua proxima corrida e garanta sua inscricao.</h1>
+          <p>Pesquise eventos por cidade, distancia ou categoria. Veja detalhes da prova, organize sua participacao e acompanhe seu historico no LifeRun.</p>
+          <form class="search-panel" action="pages/events.html" method="get" aria-label="Pesquisar eventos">
+            <label>
+              <span>Buscar evento</span>
+              <input type="search" name="q" placeholder="Nome, cidade ou categoria" />
+            </label>
+            <label>
+              <span>Distancia</span>
+              <select name="distance">
+                <option value="">Todas</option>
+                <option>5 km</option>
+                <option>10 km</option>
+                <option>21 km</option>
+                <option>42 km</option>
+              </select>
+            </label>
+            <button class="button button-primary" type="submit">Pesquisar</button>
+          </form>
         </div>
-
-        <aside class="status-panel" aria-label="Resumo da fase atual">
-          <span class="status-label">Status</span>
-          <strong>Preparacao do projeto</strong>
-          <ul>
-            <li>Estrutura inicial organizada</li>
-            <li>Guia visual documentado</li>
-            <li>Modelo de dados definido</li>
-            <li>Backlog inicial criado</li>
-          </ul>
+        <aside class="hero-event" aria-label="Evento em destaque">
+          <span class="tag">Destaque</span>
+          <h2>Sunset Park Run</h2>
+          <p>12 Jul 2026, 07:30 - Parque Verde, Sao Paulo</p>
+          <dl class="event-stats">
+            <div><dt>Distancias</dt><dd>5 km / 10 km</dd></div>
+            <div><dt>Valor</dt><dd>R$ 89,90</dd></div>
+            <div><dt>Vagas</dt><dd>420</dd></div>
+          </dl>
+          <a class="button button-secondary light" href="pages/event-detail.html">Ver detalhes</a>
         </aside>
       </section>
 
-      <section class="section" id="fundacao">
-        <div class="section-heading">
-          <p class="eyebrow">Fundacao</p>
-          <h2>O que a Fase 0 entrega</h2>
+      <section class="section">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">Eventos</p>
+            <h2>Corridas em destaque</h2>
+          </div>
+          <a class="text-link" href="pages/events.html">Ver todos</a>
         </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="card-number">01</span>
-            <h3>Estrutura do projeto</h3>
-            <p>Pastas para paginas, estilos, scripts, dados, testes, assets e documentos.</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-number">02</span>
-            <h3>Padrao visual</h3>
-            <p>Tokens de cor, espacamento, componentes base e regras responsivas.</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-number">03</span>
-            <h3>Modelo de dados</h3>
-            <p>Entidades centrais para usuarios, eventos, inscricoes, pagamentos e resultados.</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-number">04</span>
-            <h3>Backlog tecnico</h3>
-            <p>Requisitos do PRD organizados em epicos e tarefas para as proximas fases.</p>
-          </article>
-        </div>
+        <div class="event-grid" data-event-list="featured"></div>
       </section>
 
-      <section class="section next-steps" id="proximos-passos">
+      <section class="section category-band" aria-label="Categorias">
         <div>
-          <p class="eyebrow">Depois da Fase 0</p>
-          <h2>Proxima etapa: MVP publico</h2>
-          <p>
-            A Fase 1 deve transformar esta base em uma experiencia navegavel com home,
-            listagem de eventos, detalhes, cadastro, login e perfil basico.
-          </p>
+          <p class="eyebrow">Categorias</p>
+          <h2>Escolha pelo seu tipo de prova</h2>
         </div>
-        <a class="button button-primary" href="docs/implementation_plan.md#4-fase-1---mvp-publico-home-eventos-e-autenticacao">
-          Abrir Fase 1
-        </a>
+        <div class="chip-list">
+          <a href="pages/events.html?category=Rua">Rua</a>
+          <a href="pages/events.html?category=Trail">Trail</a>
+          <a href="pages/events.html?category=Caminhada">Caminhada</a>
+          <a href="pages/events.html?category=Maratona">Maratona</a>
+        </div>
       </section>
     </main>
   </div>
-
   <script src="scripts/main.js"></script>
 </body>
 </html>

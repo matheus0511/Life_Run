@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeRun | Eventos</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../index.html" aria-label="LifeRun"><span class="brand-mark">LR</span><span><strong>LifeRun</strong><small>Eventos esportivos</small></span></a>
+      <nav class="topbar-nav" aria-label="Navegacao principal"><a href="../index.html">Home</a><a href="events.html" aria-current="page">Eventos</a><a href="profile.html">Perfil</a><a class="nav-button" href="login.html">Entrar</a></nav>
+    </header>
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Calendario inicial</p>
+        <h1>Eventos disponiveis</h1>
+        <p>Filtre por cidade, estado, distancia e tipo de prova para encontrar a melhor largada.</p>
+      </section>
+      <section class="filter-panel" aria-label="Filtros de eventos">
+        <label><span>Busca</span><input id="eventSearch" type="search" placeholder="Nome, cidade ou categoria" /></label>
+        <label><span>Cidade</span><select id="cityFilter"><option value="">Todas</option><option>Sao Paulo</option><option>Rio de Janeiro</option><option>Curitiba</option></select></label>
+        <label><span>Distancia</span><select id="distanceFilter"><option value="">Todas</option><option>5 km</option><option>10 km</option><option>21 km</option><option>42 km</option></select></label>
+      </section>
+      <section class="section compact-section"><div class="event-grid" data-event-list="all"></div></section>
+    </main>
+  </div>
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Backlog Inicial - LifeRun
+﻿# Backlog Inicial - LifeRun
 
 ## Epico 0 - Preparacao do Projeto
 
@@ -11,26 +11,26 @@
 
 ## Epico 1 - Home e Eventos
 
-- [ ] Criar home com banner principal.
-- [ ] Criar listagem de proximos eventos.
-- [ ] Criar busca por nome, cidade e categoria.
-- [ ] Criar tela de detalhes do evento.
-- [ ] Exibir data, local, horario, valor e distancias.
+- [x] Criar home com banner principal.
+- [x] Criar listagem de proximos eventos.
+- [x] Criar busca por nome, cidade e categoria.
+- [x] Criar tela de detalhes do evento.
+- [x] Exibir data, local, horario, valor e distancias.
 
 ## Epico 2 - Autenticacao
 
-- [ ] Criar tela de cadastro.
-- [ ] Criar tela de login.
-- [ ] Criar fluxo de recuperacao de senha.
-- [ ] Validar campos obrigatorios.
+- [x] Criar tela de cadastro.
+- [x] Criar tela de login.
+- [x] Criar fluxo de recuperacao de senha.
+- [x] Validar campos obrigatorios no HTML.
 - [ ] Definir contrato futuro da API de autenticacao.
 
 ## Epico 3 - Perfil do Atleta
 
-- [ ] Criar perfil basico.
-- [ ] Exibir foto, nome, idade e cidade.
-- [ ] Preparar area de historico.
-- [ ] Preparar area de estatisticas.
+- [x] Criar perfil basico.
+- [x] Exibir foto/iniciais, nome, idade e cidade.
+- [x] Preparar area de historico.
+- [x] Preparar area de estatisticas.
 
 ## Epico 4 - Inscricoes
 

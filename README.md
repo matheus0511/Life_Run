@@ -1,12 +1,12 @@
-# LifeRun
+﻿# LifeRun
 
 LifeRun e uma plataforma web para descoberta, inscricao e gestao de corridas, caminhadas, maratonas e eventos esportivos.
 
 ## Fase atual
 
-Fase 0 - Preparacao do Projeto.
+Fase 1 - MVP Publico: Home, Eventos e Autenticacao.
 
-Esta etapa cria a base tecnica, visual e organizacional para o MVP descrito em `docs/implementation_plan.md`.
+Esta etapa entrega uma primeira experiencia navegavel com home, pesquisa, listagem de eventos, detalhes, cadastro, login, recuperacao de senha e perfil basico.
 
 ## Como executar
 
@@ -27,12 +27,6 @@ Se a execucao de scripts estiver bloqueada no Windows:
 powershell -ExecutionPolicy Bypass -File scripts/dev.ps1
 ```
 
-Alternativa quando Node.js/npm estiver instalado:
-
-```bash
-npm run dev
-```
-
 Depois acesse:
 
 ```text
@@ -42,19 +36,7 @@ http://localhost:5173
 Verificacao de estrutura:
 
 ```powershell
-.\scripts\check.ps1
-```
-
-Se a execucao de scripts estiver bloqueada no Windows:
-
-```powershell
 powershell -ExecutionPolicy Bypass -File scripts/check.ps1
-```
-
-Verificacao JavaScript quando Node.js estiver instalado:
-
-```bash
-npm run check
 ```
 
 ## Estrutura
@@ -63,11 +45,21 @@ npm run check
 assets/     Imagens, icones e recursos visuais.
 data/       Seeds, fixtures e contratos de dados.
 docs/       PRD, plano, arquitetura, guia visual e backlog.
-pages/      Paginas futuras da aplicacao.
+pages/      Paginas da aplicacao web.
 scripts/    JavaScript do frontend.
 styles/     CSS global e tokens visuais.
 tests/      Testes futuros.
 ```
+
+## Paginas da Fase 1
+
+- `index.html` - Home com banner, busca, categorias e eventos em destaque.
+- `pages/events.html` - Listagem e filtros de eventos.
+- `pages/event-detail.html` - Detalhes de evento.
+- `pages/register.html` - Cadastro de usuario.
+- `pages/login.html` - Login.
+- `pages/forgot-password.html` - Recuperacao de senha.
+- `pages/profile.html` - Perfil basico do atleta.
 
 ## Documentos principais
 
