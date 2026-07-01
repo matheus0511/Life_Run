@@ -3,123 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LifeRun | Tela Inicial</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta
+    name="description"
+    content="LifeRun e uma plataforma para descoberta, inscricao e gestao de eventos de corrida."
+  />
+  <title>LifeRun | Base do Projeto</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <div class="brand">
-        <div class="brand-badge">LR</div>
-        <div>
+      <a class="brand" href="/" aria-label="LifeRun">
+        <span class="brand-mark">LR</span>
+        <span>
           <strong>LifeRun</strong>
-          <span>App de corrida</span>
-        </div>
-      </div>
-      <nav class="nav-actions">
-        <a href="#" class="btn btn-secondary">Entrar</a>
-        <a href="#" class="btn btn-primary">Cadastrar</a>
+          <small>Eventos esportivos</small>
+        </span>
+      </a>
+
+      <nav class="topbar-nav" aria-label="Navegacao principal">
+        <a href="#fase-zero">Fase 0</a>
+        <a href="#fundacao">Fundacao</a>
+        <a href="#proximos-passos">Proximos passos</a>
       </nav>
     </header>
 
-    <main class="cover">
-      <section class="cover-top">
-        <div class="cover-intro">
-          <div class="cover-badge">
-            <div class="brand-badge">LR</div>
-            <div>
-              <strong>LifeRun</strong>
-              <span>O app oficial de corrida</span>
-            </div>
-          </div>
-          <h1>Corra com energia. Inscreva-se nos próximos eventos.</h1>
-          <p>Descubra percursos selecionados, receba informações rápidas e garanta sua vaga nas provas mais emocionantes.</p>
-          <div class="cover-actions">
-            <a href="#" class="btn btn-primary btn-large">Inscrever-se</a>
-            <a href="#" class="btn btn-secondary btn-large">Ver eventos</a>
-          </div>
-          <div class="quick-info">
-            <div>
-              <span>Data</span>
-              <strong>12 Jun</strong>
-            </div>
-            <div>
-              <span>Local</span>
-              <strong>Parque Verde</strong>
-            </div>
-            <div>
-              <span>Horário</span>
-              <strong>07:30</strong>
-            </div>
+    <main>
+      <section class="hero" id="fase-zero">
+        <div class="hero-content">
+          <p class="eyebrow">Fase 0 em andamento</p>
+          <h1>Base tecnica e organizacional do LifeRun</h1>
+          <p>
+            Esta primeira entrega prepara a estrutura do projeto para evoluir
+            para o MVP: autenticacao, eventos, inscricoes, pagamentos e resultados.
+          </p>
+
+          <div class="hero-actions" aria-label="Acoes principais">
+            <a class="button button-primary" href="docs/implementation_plan.md">Ver plano</a>
+            <a class="button button-secondary" href="docs/backlog.md">Ver backlog</a>
           </div>
         </div>
 
-        <aside class="cover-banner">
-          <span class="banner-chip">Banner principal</span>
-          <h2>Trail Sunset Run</h2>
-          <p>Participe da corrida de 10km com percurso misto, trilhas verdes e chegada animada.</p>
-          <div class="banner-meta">
-            <div>
-              <strong>10 km</strong>
-              <span>Percurso</span>
-            </div>
-            <div>
-              <strong>Anfitrião</strong>
-              <span>LifeRun</span>
-            </div>
-          </div>
+        <aside class="status-panel" aria-label="Resumo da fase atual">
+          <span class="status-label">Status</span>
+          <strong>Preparacao do projeto</strong>
+          <ul>
+            <li>Estrutura inicial organizada</li>
+            <li>Guia visual documentado</li>
+            <li>Modelo de dados definido</li>
+            <li>Backlog inicial criado</li>
+          </ul>
         </aside>
       </section>
 
-      <section class="cover-extras">
-        <article class="events-card">
-          <div class="section-head">
-            <span>Próximos eventos</span>
-            <a href="#">Ver todos</a>
-          </div>
-          <ul>
-            <li><strong>City Sprint</strong><span>20 Jun • 5 km urbano</span></li>
-            <li><strong>Forest Run</strong><span>27 Jun • 12 km na mata</span></li>
-            <li><strong>Night Pulse</strong><span>03 Jul • 8 km noturno</span></li>
-          </ul>
-        </article>
+      <section class="section" id="fundacao">
+        <div class="section-heading">
+          <p class="eyebrow">Fundacao</p>
+          <h2>O que a Fase 0 entrega</h2>
+        </div>
 
-        <article class="routes-card">
-          <div class="section-head">
-            <span>Destaque para os percursos</span>
-          </div>
-          <div class="route-list">
-            <div>
-              <strong>Percurso Verde</strong>
-              <p>Trilha suave com ponto de hidratação.</p>
-            </div>
-            <div>
-              <strong>Rota Urbana</strong>
-              <p>Trecho rápido pelas principais avenidas.</p>
-            </div>
-            <div>
-              <strong>Desafio Montanha</strong>
-              <p>Subida íngreme com vista panorâmica.</p>
-            </div>
-          </div>
-        </article>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="card-number">01</span>
+            <h3>Estrutura do projeto</h3>
+            <p>Pastas para paginas, estilos, scripts, dados, testes, assets e documentos.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-number">02</span>
+            <h3>Padrao visual</h3>
+            <p>Tokens de cor, espacamento, componentes base e regras responsivas.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-number">03</span>
+            <h3>Modelo de dados</h3>
+            <p>Entidades centrais para usuarios, eventos, inscricoes, pagamentos e resultados.</p>
+          </article>
+          <article class="feature-card">
+            <span class="card-number">04</span>
+            <h3>Backlog tecnico</h3>
+            <p>Requisitos do PRD organizados em epicos e tarefas para as proximas fases.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section next-steps" id="proximos-passos">
+        <div>
+          <p class="eyebrow">Depois da Fase 0</p>
+          <h2>Proxima etapa: MVP publico</h2>
+          <p>
+            A Fase 1 deve transformar esta base em uma experiencia navegavel com home,
+            listagem de eventos, detalhes, cadastro, login e perfil basico.
+          </p>
+        </div>
+        <a class="button button-primary" href="docs/implementation_plan.md#4-fase-1---mvp-publico-home-eventos-e-autenticacao">
+          Abrir Fase 1
+        </a>
       </section>
     </main>
-
-    <section class="features">
-      <article class="feature-card">
-        <h2>Plano diário</h2>
-        <p>Treinos planejados com base no seu ritmo e disponibilidade.</p>
-      </article>
-      <article class="feature-card">
-        <h2>Mapa da corrida</h2>
-        <p>Rotas ao ar livre com GPS e estatísticas em tempo real.</p>
-      </article>
-      <article class="feature-card">
-        <h2>Desafios</h2>
-        <p>Conquiste badges, compare resultados e acompanhe sua evolução.</p>
-      </article>
-    </section>
   </div>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>
